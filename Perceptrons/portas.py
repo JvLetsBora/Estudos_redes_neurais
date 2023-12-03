@@ -25,17 +25,15 @@ def _nor(value):
 
 # Casos especias
 
-def _not(number):
-    return( number*-1) + 1
-
-
 def _xor(value):
-    or_1 = _or([_not(value[0]),value[1]])
-    or_2 = _or([value[0],_not(value[1])])
-    print(f"Para os valores {value} o resultado foi {_nand([or_1,or_2])}")
-
+    or_1 = _nand(value)
+    or_2 = _or(value)
+    print(f"Para os valores {value} o resultado foi {_and([or_1,or_2])}")
 
 def teste(function):
     teste = [[0,0],[1,0],[0,1],[1,1]]
     for i in teste:
        function(i)
+
+
+teste(_xor)

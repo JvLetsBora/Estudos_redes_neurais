@@ -1,24 +1,15 @@
 from neural_lib import Perceptron
 
+# Principais portas lógicas
+
 def _nand(value):
     case = Perceptron(threshold=1,x=value, w=[-1,-1])
     return case.operacao()
 
 
-testes = [[0,0],[1,0],[1,1],[0,1]]
-
-# print("NAND")
-# for i in testes:
-#     _nand(i)
-
 def _and(value):
     case = Perceptron(threshold=-2,x=value, w=[1,1])
     return case.operacao()
-
-
-# print("AND")
-# for i in testes:
-#    _and(i)
 
 
 def _or(value):
@@ -26,26 +17,25 @@ def _or(value):
     return case.operacao()
 
 
-# print("OR")
-# for i in testes:
-#    _or(i)
-
 
 def _nor(value):
     case = Perceptron(threshold=1,x=value, w=[-2,-2])
     return case.operacao()
 
 
-# print("NOR")
-# for i in testes:
-#    _nor(i)
+# Casos especias
+
+def _not(number):
+    return( number*-1) + 1
 
 
-def _nor(value):
-    case = Perceptron(threshold=1,x=value, w=[-2,-2])
-    return case.operacao()
+def _xor(value):
+    or_1 = _or([_not(value[0]),value[1]])
+    or_2 = _or([value[0],_not(value[1])])
+    print(f"Para os valores {value} o resultado foi {_nand([or_1,or_2])}")
 
 
-print("NOR")
-for i in testes:
-   _nor(i)
+def teste(function):
+    teste = [[0,0],[1,0],[0,1],[1,1]]
+    for i in teste:
+       function(i)

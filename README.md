@@ -19,18 +19,3 @@ Documentação principal do projeto.
 
 ## LICENSE
 Arquivo de licença.
-
-ESTUDOS_REDES_NEURAIS/
-│
-├── .git/                   # Pasta do Git (controle de versão)
-│
-├── Perceptrons/            # Código-fonte do projeto
-│   ├── computer.py         # Testes de lógica de computadores
-│   ├── doors.py            # Implementação de portas lógicas
-│   └── neural_lib.py       # Códigos referente a criação de neuronios artificiais
-│
-│
-├── .gitignore              # Arquivo de configuração do Git para ignorar certos arquivos/diretórios
-├── README.md               # Documentação principal do projeto
-├── LICENSE                 # Arquivo de licença
-└── ...

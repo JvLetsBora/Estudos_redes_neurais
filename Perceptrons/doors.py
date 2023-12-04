@@ -1,4 +1,4 @@
-from neural_lib import Perceptron
+from neural_lib import Perceptron, Sigmoid_neuron
 
 # Principais portas lógicas
 
@@ -28,12 +28,30 @@ def _nor(value):
 def _xor(value):
     or_1 = _nand(value)
     or_2 = _or(value)
-    print(f"Para os valores {value} o resultado foi {_and([or_1,or_2])}")
+    return _and([or_1,or_2])
+
+# Testador de portas lógicas:
 
 def teste(function):
     teste = [[0,0],[1,0],[0,1],[1,1]]
     for i in teste:
-       function(i)
+       print(f"{i} -> {function(i)}")
 
 
-teste(_xor)
+portas ={
+    "or":_or,
+    "nor":_nor,
+    "xor":_xor,
+    "and":_and,
+    "nand":_nand,
+}
+
+def main():
+    porta = input("Digite alguma das seguintes portas para testar nor, and, nand, xor, or: ")
+    print(porta.upper())
+    teste(portas[porta])
+
+
+
+if __name__ == "__main__":
+    main()

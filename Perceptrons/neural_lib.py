@@ -10,13 +10,7 @@ class Perceptron():
         soma = 0
         for i in range(len(self.x)):
             soma += self.x[i]*self.w[i]
-
-        if soma + self.threshold >= 0:
-           #print(f"Para a soma: {self.x[0]*self.w[0]+self.x[1]*self.w[1]}, x: {self.x[0]} * w: {self.w[0]} + x: {self.x[1]} * w: {self.w[1]}, com bias: {self.threshold}, sendo {self.x} --> 1")
-           return 1
-        else:
-            #print(f"Para a soma: {self.x[0]*self.w[0]+self.x[1]*self.w[1]}, x: {self.x[0]} * w: {self.w[0]} + x: {self.x[1]} * w: {self.w[1]}, com bias: {self.threshold}, sendo {self.x} --> 0")
-            return 0
+        return 1 if soma + self.threshold >= 0 else 0
         
 
 class Sigmoid_neuron():

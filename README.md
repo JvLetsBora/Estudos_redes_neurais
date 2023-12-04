@@ -20,8 +20,6 @@ Documentação principal do projeto.
 ## LICENSE
 Arquivo de licença.
 
-...
-
 ESTUDOS_REDES_NEURAIS/
 │
 ├── .git/                   # Pasta do Git (controle de versão)

@@ -7,6 +7,7 @@ Código-fonte do projeto relacionado a estudos de redes neurais.
 - `computer.py`: Testes de lógica de computadores.
 - `doors.py`: Implementação de portas lógicas.
 - `neural_lib.py`: Implementação de neuronios artificiais.
+- - `ponderada6.py`: Implementação de aprendizado.
 
 ## .git/
 Pasta do Git para controle de versão.

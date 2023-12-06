@@ -45,7 +45,7 @@ if __name__ == "__main__":
         [1, 1]
     ])
     
-    labels = np.array(doors["and"])  # Saídas esperadas
+    labels = np.array(doors["and"])  # <------------ Porta que voce deseja treinar
 
     # Criação do perceptron
     perceptron = Perceptron(num_inputs=2)
@@ -53,16 +53,8 @@ if __name__ == "__main__":
     # Treinamento
     perceptron.train(training_inputs, labels, epochs=100)
 
-    # Teste
-    test_inputs = np.array([
-        [0, 0],
-        [0, 1],
-        [1, 0],
-        [1, 1]
-    ])
-
     print("Predictions:")
-    for inputs in test_inputs:
+    for inputs in training_inputs:
         prediction = perceptron.predict(inputs)
         print(f"{inputs} -> {prediction}")
 
